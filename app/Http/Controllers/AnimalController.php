@@ -27,6 +27,7 @@ class AnimalController extends Controller
     public function update(Request $request, $id){
         echo "Mengubah Data Animals id $id\n";
         $this->animals[$id] = $request->nama;
+
         echo "Menampilkan Data Animals:\n";
         foreach($this->animals as $animals){
             echo "- ".$animals."\n";
@@ -36,6 +37,7 @@ class AnimalController extends Controller
     public function destroy($id){
         echo "Menghapus Data Animals id $id\n";
         array_splice($this->animals,$id,1);
+        
         echo "Menampilkan Data Animals:\n";
         foreach($this->animals as $animals){
             echo "- ".$animals."\n";
